@@ -48,7 +48,7 @@ module "rds" {
     tags = var.tags
 
     create_db_subnet_group = var.create_db_subnet_group
-    db_subnet_group_name = var.db_subnet_group_name
+    db_subnet_group_name = data.terraform_remote_state.central-vpc-dev.outputs.private_subnet_group_id
     db_subnet_group_use_name_prefix = var.db_subnet_group_use_name_prefix
     db_subnet_group_description = var.db_subnet_group_description
     subnet_ids = var.subnet_ids
