@@ -84,28 +84,28 @@ variable "final_snapshot_identifier_prefix" {
 variable "instance_class" {
   description = "The instance type of the RDS instance"
   type        = string
-  default     = null
+  default     = "db.m4.large"
 }
 
-variable "name" {
+variable "database_name" {
   description = "The DB name to create. If omitted, no database is created initially"
   type        = string
   default     = null
 }
 
-variable "username" {
+variable "database_username" {
   description = "Username for the master DB user"
   type        = string
   default     = null
 }
 
-variable "password" {
+variable "database_password" {
   description = "Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file"
   type        = string
   default     = ""
 }
 
-variable "port" {
+variable "database_port" {
   description = "The port on which the DB accepts connections"
   type        = string
   default     = null
