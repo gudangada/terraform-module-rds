@@ -61,7 +61,7 @@ output "db_instance_username" {
 
 output "db_instance_password" {
   description = "The database password (this password may be old, because Terraform doesn't track it after initial creation)"
-  value       = module.rds.master_password
+  value       = module.rds.db_instance_password
   sensitive   = true
 }
 
@@ -118,6 +118,6 @@ output "db_option_group_arn" {
 
 output "db_master_password" {
   description = "The master password"
-  value       = module.rds.db_instance_master_password
+  value       = module.rds.db_master_password
   sensitive   = true
 }
