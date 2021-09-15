@@ -121,3 +121,7 @@ output "db_master_password" {
   value       = module.rds.db_master_password
   sensitive   = true
 }
+
+output "rds_sg_id" {
+  value = aws_security_group.rds_sg.id
+}

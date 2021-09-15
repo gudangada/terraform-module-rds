@@ -1,3 +1,23 @@
+variable "product_domain" {
+  description = "GudangAda Product Domain (e.g. marketplace, saas, logistic, etc)"
+  type        = string
+}
+
+variable "service_role" {
+  description = "Role of the resource/service"
+  type        = string
+}
+
+variable "service_name" {
+  description = "Service name"
+  type        = string
+}
+
+variable "environment" {
+  description = "Resource environment (dev, staging, prod)"
+  type        = string
+}
+
 variable "identifier" {
   description = "The name of the RDS instance, if omitted, Terraform will assign a random, unique identifier"
   type        = string
@@ -211,7 +231,7 @@ variable "tags" {
 variable "create_db_subnet_group" {
   description = "Whether to create a database subnet group"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "db_subnet_group_name" {
