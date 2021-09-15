@@ -26,7 +26,7 @@ module "rds" {
     password = var.database_password
     port = var.database_port
     
-    vpc_security_group_ids = aws_security_group.rds_sg.id
+    vpc_security_group_ids = [aws_security_group.rds_sg.id]
     availability_zone = var.availability_zone
     multi_az = var.multi_az
     iops = var.iops
