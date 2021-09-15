@@ -14,7 +14,7 @@ variable "service_name" {
 }
 
 variable "environment" {
-  description = "Resource environment (dev, staging, prod)"
+  description = "Resource environment (development, staging, prod)"
   type        = string
 }
 
@@ -274,7 +274,7 @@ variable "parameter_group_name" {
 variable "parameter_group_use_name_prefix" {
   description = "Determines whether to use `parameter_group_name` as is or create a unique name beginning with the `parameter_group_name` as the prefix"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "parameter_group_description" {
@@ -283,7 +283,7 @@ variable "parameter_group_description" {
   default     = ""
 }
 
-variable "family" {
+variable "parameter_group_family" {
   description = "The family of the DB parameter group"
   type        = string
   default     = ""
@@ -299,7 +299,7 @@ variable "parameters" {
 variable "create_db_option_group" {
   description = "(Optional) Create a database option group"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "option_group_name" {

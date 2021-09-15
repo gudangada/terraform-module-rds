@@ -54,10 +54,10 @@ module "rds" {
     subnet_ids = var.subnet_ids
 
     create_db_parameter_group = var.create_db_parameter_group
-    parameter_group_name = var.parameter_group_name
+    parameter_group_name = format("%s-pgroup-%s", var.service_name, var.environment)
     parameter_group_use_name_prefix = var.parameter_group_use_name_prefix
     parameter_group_description = var.parameter_group_description
-    family = var.family
+    family = var.parameter_group_family
     parameters = var.parameters
 
     create_db_option_group = var.create_db_option_group
