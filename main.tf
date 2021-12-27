@@ -4,10 +4,11 @@ module "rds" {
 
   identifier = var.identifier
 
-  allocated_storage = var.allocated_storage
-  storage_type      = var.storage_type
-  storage_encrypted = var.storage_encrypted
-  kms_key_id        = var.kms_key_id
+  allocated_storage     = var.allocated_storage
+  max_allocated_storage = var.max_allocated_storage
+  storage_type          = var.storage_type
+  storage_encrypted     = var.storage_encrypted
+  kms_key_id            = var.kms_key_id
 
   replicate_source_db  = var.replicate_source_db
   cross_region_replica = var.cross_region_replica
