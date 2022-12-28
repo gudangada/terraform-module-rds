@@ -10,4 +10,12 @@ locals {
     Environment   = var.environment
     ManagedBy     = "terraform"
   }
+
+  default_parameters = [
+    {
+      name         = "rds.logical_replication"
+      value        = 1
+      apply_method = "pending-reboot"
+    }
+  ]
 }

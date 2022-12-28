@@ -59,7 +59,7 @@ module "rds" {
   parameter_group_use_name_prefix = var.parameter_group_use_name_prefix
   parameter_group_description     = var.parameter_group_description
   family                          = var.parameter_group_family
-  parameters                      = var.parameters
+  parameters                      = concat(local.default_parameters, var.parameters)
 
   create_db_option_group       = var.create_db_option_group
   option_group_name            = var.option_group_name
